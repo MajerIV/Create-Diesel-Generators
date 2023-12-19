@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "createdieselgenerators:liquid_methane",
+    "createdieselgenerators:flowing_liquid_methane"
+
+  ]
+}

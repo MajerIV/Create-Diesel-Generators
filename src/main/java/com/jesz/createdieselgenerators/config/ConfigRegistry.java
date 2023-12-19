@@ -48,6 +48,7 @@ public class ConfigRegistry {
     public static final ForgeConfigSpec.ConfigValue<Boolean> BIODIESEL_TAG;
     public static final ForgeConfigSpec.ConfigValue<Boolean> GASOLINE_TAG;
     public static final ForgeConfigSpec.ConfigValue<Boolean> DIESEL_TAG;
+    public static final ForgeConfigSpec.ConfigValue<Boolean> LIQUID_METHANE_TAG;
 
 
     static {
@@ -78,6 +79,8 @@ public class ConfigRegistry {
                         .define("forge:diesel tag compatibility", true);
                 GASOLINE_TAG = SERVER_BUILDER.comment("forge:gasoline tag compatibility")
                         .define("forge:gasoline tag compatibility", true);
+                LIQUID_METHANE_TAG = SERVER_BUILDER.comment("forge:liquidmethane tag compatibility")
+                        .define("forge:liquidmethane tag compatibility", true);
             SERVER_BUILDER.pop();
 
             SERVER_BUILDER.push("Stress/Speed/Burn Rate Values");

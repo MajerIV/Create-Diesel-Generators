@@ -1,5 +1,11 @@
 package com.jesz.createdieselgenerators.blocks.entity;
 
+import static com.jesz.createdieselgenerators.blocks.HugeDieselEngineBlock.*;
+import static com.simibubi.create.content.kinetics.base.RotatedPillarKineticBlock.*;
+
+import java.lang.ref.WeakReference;
+import java.util.List;
+
 import com.jesz.createdieselgenerators.blocks.BlockRegistry;
 import com.jesz.createdieselgenerators.blocks.PoweredEngineShaftBlock;
 import com.jesz.createdieselgenerators.compat.computercraft.CCProxy;
@@ -17,6 +23,7 @@ import com.simibubi.create.foundation.blockEntity.behaviour.fluid.SmartFluidTank
 import com.simibubi.create.foundation.blockEntity.behaviour.scrollValue.ScrollOptionBehaviour;
 import com.simibubi.create.foundation.fluid.FluidHelper;
 import com.simibubi.create.foundation.utility.Lang;
+
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -36,12 +43,6 @@ import net.minecraftforge.common.capabilities.Capability;
 import net.minecraftforge.common.capabilities.ForgeCapabilities;
 import net.minecraftforge.common.util.LazyOptional;
 import net.minecraftforge.fluids.FluidStack;
-
-import java.lang.ref.WeakReference;
-import java.util.List;
-
-import static com.jesz.createdieselgenerators.blocks.HugeDieselEngineBlock.FACING;
-import static com.simibubi.create.content.kinetics.base.RotatedPillarKineticBlock.AXIS;
 
 public class HugeDieselEngineBlockEntity extends SmartBlockEntity implements IHaveGoggleInformation {
     public WeakReference<PoweredEngineShaftBlockEntity> target = new WeakReference<>(null);
@@ -148,7 +149,7 @@ public class HugeDieselEngineBlockEntity extends SmartBlockEntity implements IHa
         movementDirection.withCallback($ -> onDirectionChanged());
 
         behaviours.add(movementDirection);
-        tank = SmartFluidTankBehaviour.single(this, 100);
+        tank = SmartFluidTankBehaviour.single(this, 1000);
         behaviours.add(tank);
     }
 

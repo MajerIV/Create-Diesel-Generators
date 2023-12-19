@@ -4,6 +4,8 @@
   "item.createdieselgenerators.engine_silencer": "Engine Silencer",
   "item.createdieselgenerators.plant_oil_bucket": "Plant Oil Bucket",
   "fluid.createdieselgenerators.plant_oil": "Plant Oil",
+  "fluid.createdieselgenerators.liquid_methane":"Liquid Methane",
+  "item.createdieselgenerators.liquid_methane_bucket": "Liquid Methane Bucket",
   "item.createdieselgenerators.biodiesel_bucket": "Biodiesel Bucket",
   "item.createdieselgenerators.ethanol_bucket": "Ethanol Bucket",
   "fluid.createdieselgenerators.biodiesel": "Biodiesel",
