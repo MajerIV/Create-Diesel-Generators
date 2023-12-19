@@ -1,10 +1,11 @@
 package com.jesz.createdieselgenerators.fluids;
 
+import static com.jesz.createdieselgenerators.CreateDieselGenerators.*;
+
 import com.tterrag.registrate.util.entry.FluidEntry;
+
 import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.fluids.ForgeFlowingFluid;
-
-import static com.jesz.createdieselgenerators.CreateDieselGenerators.REGISTRATE;
 
 public class FluidRegistry {
 
@@ -62,6 +63,16 @@ public class FluidRegistry {
     public static final FluidEntry<ForgeFlowingFluid.Flowing> ETHANOL =
             REGISTRATE.fluid("ethanol", new ResourceLocation("createdieselgenerators:block/ethanol_still"), new ResourceLocation("createdieselgenerators:block/ethanol_flow"))
                     .lang("Ethanol")
+                    .properties(b -> b.viscosity(1500)
+                            .density(500))
+                    .fluidProperties(p -> p.levelDecreasePerBlock(2)
+                            .tickRate(25)
+                            .slopeFindDistance(5)
+                            .explosionResistance(100f))
+                    .register();
+    public static final FluidEntry<ForgeFlowingFluid.Flowing> LIQUID_METHANE =
+            REGISTRATE.fluid("liquid_methane", new ResourceLocation("createdieselgenerators:block/liquid_methane_still"), new ResourceLocation("createdieselgenerators:block/liquid_methane_flow"))
+                    .lang("Liquid Methane")
                     .properties(b -> b.viscosity(1500)
                             .density(500))
                     .fluidProperties(p -> p.levelDecreasePerBlock(2)

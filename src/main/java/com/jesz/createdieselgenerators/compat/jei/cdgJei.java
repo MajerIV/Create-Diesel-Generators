@@ -1,5 +1,19 @@
 package com.jesz.createdieselgenerators.compat.jei;
 
+import static com.simibubi.create.compat.jei.CreateJEI.*;
+
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.List;
+import java.util.Map;
+import java.util.function.Consumer;
+import java.util.function.Function;
+import java.util.function.Predicate;
+import java.util.function.Supplier;
+
+import javax.annotation.ParametersAreNonnullByDefault;
+
 import com.google.common.collect.ImmutableList;
 import com.jesz.createdieselgenerators.blocks.BlockRegistry;
 import com.jesz.createdieselgenerators.config.ConfigRegistry;
@@ -9,7 +23,11 @@ import com.jesz.createdieselgenerators.other.FuelTypeManager;
 import com.jesz.createdieselgenerators.recipes.DistillationRecipe;
 import com.jesz.createdieselgenerators.recipes.RecipeRegistry;
 import com.simibubi.create.AllBlocks;
-import com.simibubi.create.compat.jei.*;
+import com.simibubi.create.compat.jei.CreateJEI;
+import com.simibubi.create.compat.jei.DoubleItemIcon;
+import com.simibubi.create.compat.jei.EmptyBackground;
+import com.simibubi.create.compat.jei.ItemIcon;
+import com.simibubi.create.compat.jei.SlotMover;
 import com.simibubi.create.compat.jei.category.CreateRecipeCategory;
 import com.simibubi.create.content.processing.basin.BasinRecipe;
 import com.simibubi.create.foundation.config.ConfigBase;
@@ -18,6 +36,7 @@ import com.simibubi.create.foundation.recipe.IRecipeTypeInfo;
 import com.simibubi.create.foundation.utility.Components;
 import com.simibubi.create.infrastructure.config.AllConfigs;
 import com.simibubi.create.infrastructure.config.CRecipes;
+
 import mezz.jei.api.IModPlugin;
 import mezz.jei.api.JeiPlugin;
 import mezz.jei.api.gui.drawable.IDrawable;
@@ -33,18 +52,9 @@ import net.minecraft.world.item.crafting.RecipeType;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.material.Fluid;
 
-import javax.annotation.ParametersAreNonnullByDefault;
-import java.util.*;
-import java.util.function.Consumer;
-import java.util.function.Function;
-import java.util.function.Predicate;
-import java.util.function.Supplier;
-
-import static com.simibubi.create.compat.jei.CreateJEI.*;
-
 @JeiPlugin
 @ParametersAreNonnullByDefault
-public class CDGJEI implements IModPlugin {
+public class cdgJei implements IModPlugin {
 
     private static final ResourceLocation ID = new ResourceLocation("createdieselgenerators", "jei_plugin");
     @Override

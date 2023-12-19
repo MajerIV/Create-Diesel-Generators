@@ -3,12 +3,10 @@ package com.jesz.createdieselgenerators;
 import com.jesz.createdieselgenerators.blocks.BlockRegistry;
 import com.jesz.createdieselgenerators.fluids.FluidRegistry;
 import com.jesz.createdieselgenerators.items.ItemRegistry;
+
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
-import net.minecraft.world.item.CreativeModeTabs;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.level.material.Fluid;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
@@ -53,6 +51,7 @@ public class CreativeTab {
                         output.accept(ItemRegistry.LIGHTER.get());
                         output.accept(ItemRegistry.CHEMICAL_SPRAYER.get());
                         output.accept(ItemRegistry.CHEMICAL_SPRAYER_LIGHTER.get());
+                        output.accept(FluidRegistry.LIQUID_METHANE.getBucket().get());
                     })
                     .build());
 

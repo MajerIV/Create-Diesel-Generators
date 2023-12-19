@@ -1,0 +1,14 @@
+{
+  "type": "create:compacting",
+  "ingredients": [
+    {
+      "tag": "minecraft:soul_fire_base_blocks"
+    }
+  ],
+  "results": [
+    {
+      "fluid": "createdieselgenerators:liquid_methane",
+      "amount": 100
+    }
+  ]
+}

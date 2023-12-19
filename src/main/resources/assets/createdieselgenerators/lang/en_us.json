@@ -22,6 +22,8 @@
   "item.createdieselgenerators.ethanol_bucket": "Ethanol Bucket",
   "fluid.createdieselgenerators.biodiesel": "Biodiesel",
   "fluid.createdieselgenerators.ethanol": "Ethanol",
+  "fluid.createdieselgenerators.liquid_methane": "Liquid Methane",
+  "item.createdieselgenerators.liquid_methane_bucket": "Ethanol Bucket",
   "fluid.createdieselgenerators.diesel": "Diesel",
   "fluid.createdieselgenerators.gasoline": "Gasoline",
   "item.createdieselgenerators.diesel_bucket": "Diesel Bucket",
